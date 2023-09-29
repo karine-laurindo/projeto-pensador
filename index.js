@@ -9,6 +9,8 @@ const app = express()
 const conn = require('./db/conn')
 
 //Import models
+const User = require('./models/User')
+const Tought = require('./models/Tought')
 
 //Import rotas
 
