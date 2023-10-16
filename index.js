@@ -14,6 +14,7 @@ const Tought = require('./models/Tought')
 
 // importar rotas
 const  toughtRouter = require('./routes/toughtRoutes')
+const authRouters = require('./routes/authRouters')
 
 // importar controller
 const ToughtController = require('./controllers/ToughtController')
@@ -60,7 +61,9 @@ app.use((request, response, next)=>{
 
 // rotas
 app.use('/toughts', toughtRouter)
+app.use('/', authRouters)
 app.get('/', ToughtController.showToughts)
+
 
 conn
   .sync()
