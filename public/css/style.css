@@ -139,3 +139,70 @@ footer span{
   min-height: 70vh;
   padding: 2rem;
 }
+
+/* Seção criar pensamento */
+.tought-form-container{
+  margin: 0 100px;
+}
+
+.tought-form-container form{
+  display: flex;
+  flex-direction: column;
+}
+
+.tought-form-container label{
+  font-weight: bold;
+  margin: 15px 0 5px 0;
+}
+
+.tought-form-container input{
+  padding: 10px;
+  border: 2px solid white;
+  outline: none;
+  max-width: 400px;
+}
+
+.tought-form-container input[type=submit]{
+  max-width: 154px;
+  margin: 20px 0 10px 0;
+  border-color: var(--blue);
+  color: var(--blue);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.tought-form-container h1{
+  margin: 50px 0;
+}
+
+.tought-form-container h1::before{
+  content: "";
+  padding: 2px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  background-color: var(--blue);
+  margin: 0 7px 0 0;
+}
+
+/* Seção do dashboard */
+.dashboard{
+  margin: 0 100px;
+}
+
+.title-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.title-container a{
+  text-decoration: none;
+  padding: 10px;
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+
+}

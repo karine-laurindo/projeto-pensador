@@ -5,6 +5,9 @@ module.exports = class ToughtController{
   static async showToughts(req, res){
   return res.render('toughts/home')
   }
+  static async dashboard(req,res){
+    const UserId = req.session.userId
+  }
   static async dashboard(req, res){
     return res.render('toughts/dashboard')
   }
