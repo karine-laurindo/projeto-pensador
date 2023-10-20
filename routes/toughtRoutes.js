@@ -1,23 +1,18 @@
-const express = require('express')
-const router = express.Router()
+const express = require("express");
+const router = express.Router();
 
 //Controller
-const ToughtController = require('../controllers/ToughtController')
+const ToughtController = require("../controllers/ToughtController");
 
-//Importar o midddleware de verificação de usuário
+// importar middleware de verificar usuário
 const checkAuth = require('../helpers/auth').checkAuth
 
-router.get('/dashboard', checkAuth, ToughtController.dashboard)
+router.get('/dashboard', ToughtController.dashboard)
 router.get('/add', checkAuth, ToughtController.createTought)
-
-//Rota para mostrar o formulário
-router.get('/edit/:id', checkAuth, ToughtController.editTought)
-
-//Rota para eidtar o formulário
-router.post('/edit', checkAuth, ToughtController.editToughtSave)
-
 router.post('/add', checkAuth, ToughtController.createToughtSave)
+router.get("/", ToughtController.showToughts);
 router.post("/delete", ToughtController.deleteToughts);
-router.get('/', ToughtController.showToughts)
+router.get("/atualizar/:id", ToughtController.UpToughts);
+router.post("/atualizar", ToughtController.UpdateToughts);
 
-module.exports = router
+module.exports = router;

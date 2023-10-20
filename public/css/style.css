@@ -187,22 +187,201 @@ footer span{
 
 /* Seção do dashboard */
 .dashboard{
-  margin: 0 100px;
+  width: 75vw;
+  margin: auto;
 }
-
-.title-container{
+.dashboard .title-container{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  margin-bottom: 2rem;
 }
-
-
-.title-container a{
-  text-decoration: none;
-  padding: 10px;
+.dashboard .title-container h2{
+  font-size: 30px;
+  padding-left: 1rem;
+  border-left: 6px solid var(--blue);
+}
+.dashboard .title-container .btn{
+  background-color: transparent;
   border: 2px solid var(--blue);
+  padding: 10px;
+  text-decoration: none;
   color: var(--blue);
   font-weight: bold;
+  font-size: 20px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: .25s;
+}
+.dashboard .title-container .btn:hover{
+  background-color: var(--blue);
+  color: var(--white);
+}
+.dashboard ul{
+  list-style: none;
+}
+.dashboard ul li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem .5rem;
+  border-bottom: 2px solid var(--blue);
+}
+.dashboard ul li p{
+  color: var(--blue);
+  font-size: 25px;
+  font-weight: bold;
+}
+.actions{
+  display: flex;
+  gap: 1rem;
+  width: 20%;
+}
+.actions form{
+  width: 50%;
+}
+.actions form input[type="submit"]{
+  border: 2px solid var(--blue);
+  padding: 10px 20px;
+  width: 100%;
+  color: var(--blue);
+  font-weight: bold;
+  font-size: 20px;
+  transition: .25s;
+  cursor: pointer;
+}
+.actions form input[type="submit"]:hover{
+  background-color: var(--blue);
+  color: var(--white);
+}
+.edit-container{
+  width: 30%;
+  margin: auto;
+}
+.edit-container h2{
+  font-size: 30px;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 6px solid var(--blue);
+}
+.edit-container form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.edit-container form input{
+  height: 44px;
+  border: 1px solid var(--white);
+  padding: 0.5rem;
+  outline: none;
+  transition: .25s;
+}
+.edit-container form input:focus{
+  border-color: var(--blue);
+}
+.edit-container form input[type="submit"]{
+  background-color: transparent;
+  border: 2px solid var(--blue);
+  padding: .5rem;
+  width: 40%;
+  color: var(--blue);
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .5s;
+}
+.edit-container form input[type="submit"]:hover{
+  background-color: var(--blue);
+  color: var(--white);
+}
+.emptyThoughts{
+  text-align: center;
+  font-size: 20px;
+  margin-top: 2rem;
+}
+.emptyThoughts a{
+  color: var(--blue);
+  text-decoration: none;
+}
+.emptyThoughts a:hover{
+  text-decoration: underline;
+}
 
+/* HOME */
+.home-header{
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-header h1{
+  margin-bottom: 1rem;
+}
+
+.home-header a{
+  color: var(--white);
+}
+.home-header p, .home-header form{
+  margin-bottom: 1rem;
+}
+
+.home-header input{
+  border: none;
+  border-bottom: 1px solid var(--white);
+  padding: 5rem;
+  margin-right: 1rem;
+}
+
+.home-header input[type="text"]{
+  width: 70%;
+  font-size: 18px;
+}
+
+.home-header input::placeholder{
+  color: var(--white);
+}
+
+.order-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+  margin: 0 auto 1rem;
+}
+
+.order-container form{
+  margin: 0;
+}
+
+.order-container button{
+  margin-bottom: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.order-container button:hover, .order-container i:hover, .order-container a:hover{
+  color: var(--blue);
+}
+
+.order-container button, .order-container i, .order-container a{
+  margin: 0 7px;
+}
+
+.toughts-container figure{
+  border: 1px soli #333;
+  padding: 0.5rem;
+  max-width: 70%;
+  margin: 0 auto 1rem;
+}
+
+.toughts-container blockquote{
+  font-style: italic;
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.toughts-container span{
+  columns: var(--blue);
 }
